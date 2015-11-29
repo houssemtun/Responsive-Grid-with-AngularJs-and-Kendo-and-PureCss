@@ -1,0 +1,68 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+          "http://www.w3.org/TR/html4/loose.dtd">
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A layout example that shows off a responsive email layout.">
+    <title>Email &ndash; Layout Examples &ndash; Pure</title>
+    <link href="bower_components/pure/pure-min.css" rel="stylesheet" />
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="css/layouts/email-old-ie.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+    <link href="styles/layouts/email.css" rel="stylesheet" />
+    <!--<![endif]-->
+    <link href="bower_components/angular-bootstrap/ui-bootstrap-csp.css" rel="stylesheet" />
+    <link href="bower_components/angular-ui-grid/ui-grid.min.css" rel="stylesheet" />
+    <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="bower_components/bootstrap/dist/css/bootstrap-theme.css" rel=" stylesheet" />
+    <link href="styles/kendo/kendo.common.min.css" rel="stylesheet" />
+    <link href="styles/kendo/kendo.silver.min.css" rel="stylesheet" />
+    <link href="styles/main.css" rel="stylesheet" />
+</head>
+<body ng-app="ContentApp">
+    <!-- [if lt IE 7] > <p class="browsehappy" > You are using an <strong > outdated</strong > browser. Please <a href="http://browsehappy.com/" > upgrade your browser</a > to improve your experience.</p > <![endif] -->
+    <div ng-view=""> </div>
+    <!-- build:js(.) scripts/oldieshim.js -->
+    <!-- [if lt IE 9] > <script src="bower_components/es5-shim/es5-shim.js" > </script > <script src="bower_components/json3/lib/json3.min.js" > </script > <![endif] -->
+    <!-- endbuild -->
+    <!-- build:js(.) scripts/vendor.js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/jquery-ui/jquery-ui.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-utf8-base64/angular-utf8-base64.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="bower_components/angular-ui-grid/ui-grid.js"></script>
+    <script src="scripts/yui-min.js"></script>
+    <script src="scripts/kendo.all.min.js"></script>
+    <script src="scripts/JSLINQ.js"></script>
+    <!-- endbuild -->
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="bower_components/Tabslet/jquery.tabslet.min.js"></script>
+    <script src="scripts/jquery.tabSlideOut.v1.3_custom.js"></script>
+    <script src="scripts/jquery.csv-0.71.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers.js"></script>
+    <script src="scripts/services.js"></script>
+    <script src="scripts/directives.js"></script>
+    <script src="scripts/upload.js"></script>
+    <script src="scripts/controllers/AppviewCtrl.js"></script>
+    <script src="scripts/controllers/ModalLoginInstanceCtrl.js"></script>
+    <script src="scripts/controllers/ModalLoadingInstanceCtrl.js"></script>
+    <script src="scripts/controllers/ListCtrl.js"></script>
+    <script src="scripts/services/ContentListService.js"></script>
+    <script src="scripts/services/LoadingDialogService.js"></script>
+    <script src="scripts/directives/ngFileSelect.js"></script>
+    <!--Vendor Scripts End-->
+    <!--Application Related Scripts-->
+    <!-- endbuild -->
+</body>
+</html>

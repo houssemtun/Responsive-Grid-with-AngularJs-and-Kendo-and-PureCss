@@ -1,0 +1,121 @@
+<!-- Template: Bottom Actionbar
+<nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+    <div class="container">
+       <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" ng-init="isCollapsed = true" ng-click="isCollapsed = !isCollapsed">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" collapse="isCollapsed">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <form class="navbar-form navbar-left" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Link</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+-->
+<!--<script>
+        $(document).ready(function(){
+            $("button.toogleButton").click(function(){
+                $(".contentBody").slideToggle();
+            });
+        });
+</script>-->
+
+<!--delete, csv, reset, marker, heatmap, analyse-->
+
+<nav class="navbar navbar-default navbar-fixed-bottom" role="navigation" ng-controller="MapActionCtrl">
+    <div class="contentWrapper">
+        <div class="contentHeader">
+            <div id="menu-toggle">
+                <div id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div id="cross">
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="contentBody">
+            
+            <ul class="nav navbar-nav">
+
+                <li ng-if="authenticated">
+                    <p class="title">Selektionen:</p>
+                </li>
+                <li class="bottomList">
+                    <ul class="title">
+                        <li ng-repeat="shape in shapes"  ng-click="polyClickHandler(shape, $index)" ng-class="{ 'selected-polygon': $index == selectedIndex }"
+                           >{{shape}}</li>
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+        <!--<div class="navbar-header">
+            <button type="button" class="toogleButton" ng-init="isCollapsed = true" ng-click="isCollapsed = !isCollapsed">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" collapse="isCollapsed">
+            <ul class="nav navbar-nav">
+                <p class="navbar-brand">Aktionen</p>
+                <li ng-if="authenticated" class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Markierungen <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li ng-repeat="marker in markers" style="padding-left: 5px;"><input bs-switch
+                                ng-model="marker.enabled"
+                                ng-change="selectMarker(marker)"
+                                type="checkbox"
+                                switch-active="{{ true }}"
+                                switch-on-text="An"
+                                switch-off-text="Aus"
+                                switch-on-color="primary"
+                                switch-off-color="primary"
+                                switch-animate="{{ true }}"
+                                switch-size="mini">&nbsp;{{marker.label}}</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>-->
+    </div>
+</nav>

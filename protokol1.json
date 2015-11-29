@@ -1,0 +1,56 @@
+{
+  "daten": [
+    {
+      "KUNDENID": "2",
+      "SALES": "38"
+    },
+    {
+      "KUNDENID": "3",
+      "SALES": "63"
+    },
+    {
+      "KUNDENID": "4",
+      "SALES": "98"
+    },
+    {
+      "KUNDENID": "5",
+      "SALES": "63"
+    },
+    {
+      "KUNDENID": "6",
+      "SALES": "97"
+    },
+    {
+      "KUNDENID": "7",
+      "SALES": "55"
+    },
+    {
+      "KUNDENID": "8",
+      "SALES": "102"
+    },
+    {
+      "KUNDENID": "9",
+      "SALES": "24"
+    },
+    {
+      "KUNDENID": "10",
+      "SALES": "9"
+    },
+    {
+      "KUNDENID": "11",
+      "SALES": "49"
+    },
+    {
+      "KUNDENID": "12",
+      "SALES": "14"
+    },
+    {
+      "KUNDENID": "13",
+      "SALES": "5"
+    },
+    {
+      "KUNDENID": "14",
+      "SALES": "12"
+    }
+  ]
+}

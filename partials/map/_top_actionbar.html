@@ -1,0 +1,102 @@
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation" ng-controller="MapTopbarCtrl">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="col-xs-6">
+            <a class="navbar-brand" href="#">GeoHana</a>
+        </div>
+        <div class="col-xs-6">
+            <alert style="margin-bottom: 0px;padding: 5px 30px 5px 5px;margin-top: 10px;" ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}
+            </alert>
+            <img src="./images/gisa.png" alt="Gisa GmbH" align="right">
+        </div>
+    </div>
+    <!-- /.container -->
+    <div id="wrappercontainer" ng-controller="SlideoutCtrl">
+        <div class="slide-out-div" id="container">
+            <a class="handle">Content</a>
+            <ul class="headerButtonList">
+
+                <li>
+                    <div class="hIcon" ng-click="ac.marker()">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 24 24" class="headerIcon" ng-class="{'clicked': toggle2, 'notClicked': !toggle2}">
+                            <path d="M12 11.5A2.5 2.5 0 0 1 9.5 9A2.5 2.5 0 0 1 12 6.5A2.5 2.5 0 0 1 14.5 9A2.5 2.5 0 0 1 12 11.5M12 2A7 7 0 0 0 5 9C5 14.2 12 22 12 22C12 22 19 14.2 19 9A7 7 0 0 0 12 2Z"/>
+                        </svg>
+                    </div>
+                    <div class="hText" ng-click="ac.marker()" ng-style="customStyle2.style" >
+                                 Marker
+                    </div>
+                </li>
+                <li>
+                    <div class="hIcon" ng-click="CSVgenerate()">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 24 24" class="headerIcon">
+                            <path d="M5 20H19V18H5M19 9H15V3H9V9H5L12 16L19 9Z"/>
+                        </svg>
+                    </div>
+                    <div class="hText" ng-click="CSVgenerate()" >
+                                 CSV
+                    </div>
+                </li>
+                <li>
+                    <div class="hIcon" ng-click="ac.reset()">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 24 24" class="headerIcon">
+                            <path d="M19 3H5C3.89 3 3 3.9 3 5V19A2 2 0 0 0 5 21H19A2 2 0 0 0 21 19V5C21 3.9 20.1 3 19 3M19 5V19H5V5H19Z"/>
+                        </svg>
+                    </div>
+                    <div class="hText" ng-click="ac.reset()" >
+                                 Reset
+                    </div>
+                </li>
+                <li>
+                    <div class="hIcon" ng-click="ac.delete()">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 24 24" class="headerIcon">
+                            <path d="M12 20C7.59 20 4 16.4 4 12C4 7.6 7.6 4 12 4C16.41 4 20 7.6 20 12C20 16.4 16.4 20 12 20M12 2C6.47 2 2 6.5 2 12C2 17.5 6.5 22 12 22C17.53 22 22 17.5 22 12C22 6.5 17.5 2 12 2M14.59 8L12 10.59L9.41 8L8 9.41L10.59 12L8 14.59L9.41 16L12 13.41L14.59 16L16 14.59L13.41 12L16 9.41L14.59 8Z"/>
+                        </svg>
+                    </div>
+                    <div class="hText" ng-click="ac.delete()" >
+                              Delete
+                    </div>
+                </li>
+            </ul>
+
+            <div class="tabsAnimate">
+
+                <div id="tab-2">
+                    <div class="slide-out-div-wrapper">
+                    <br>
+
+                        <div class="refreshButton" ng-click="refreshClickHandler($event)">
+                            <span class="glyphicon glyphicon-refresh"></span> Refresh
+                        </div>
+
+
+					<div ng-if="refresh && analyse && refe" ng-include src="currentTemplate"></div>
+                 </div>
+                </div>
+                <ul class="horizontal">
+                       <li id="slider-tab"><a href="#tab-2"><span class="glyphicon glyphicon-wrench"> <p style="font-family:Arial">Analyse</p> </span></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<script type="text/ng-template" id="statistics">
+
+	<div ng-show = "analyse && refe">
+        <br><br>
+
+        <div></div> <H5>Analysebereiche</H5><div dropdown-select="ddSelectOptions" dropdown-model="ddSelectSelected"></div></div>
+
+<div ng-repeat="object in minmaxdata.objects">
+
+
+<div class="whiteCard"><div  class="slider"><div><H5>{{object.object_label}}</H5><br/>
+    <ngslider  id="slider{{$index}}"  min="{{object.min_KZ_init}}" max="{{object.max_KZ_init}}" valmin="{{object.min_KZ_user}}" valmax="{{object.max_KZ_user}}">
+    <div id="slider{{$index}}generated"></div>
+</ngslider>
+
+</div></div></div>
+<br/>
+</div>
+<br/></div>
+</script>

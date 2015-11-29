@@ -1,0 +1,20 @@
+<div id="main" class="pure-u-1 width100percent">
+    <div class="email-content">
+        <div class="email-content-header pure-g">
+            <div class="pure-u-1-2">
+                <h1 class="email-content-title">{{selectedItem.name}}</h1>
+            </div>
+            <div class="email-content-controls pure-u-1-2">
+                <!--<button class="secondary-button pure-button">Reply</button>
+                <button class="secondary-button pure-button">Forward</button>
+                <button class="secondary-button pure-button">Move to</button>-->
+            </div>
+        </div>
+        <div class="email-content-body">
+            <div>
+                <kendo-grid options="lc.mainGridOptions" k-rebind="lc.selectedType">
+                </kendo-grid>
+            </div>
+        </div>
+    </div>
+</div>

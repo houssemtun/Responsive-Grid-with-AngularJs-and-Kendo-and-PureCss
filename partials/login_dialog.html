@@ -1,0 +1,26 @@
+﻿<form ng-show="!authenticated" data-ng-submit="login()">
+    <div class="modal-header">
+        <h3 class="modal-title">Anmeldung</h3>
+    </div>
+    <div class="modal-body">
+        <alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</alert>
+        <div class="row">
+            <div class="col-xs-1"></div>
+            <div class="col-xs-10">
+                <input type="text" class="form-control" placeholder="Nutzername" ng-model="formData.username">
+            </div>
+            <div class="col-xs-1"></div>
+
+        </div>
+        <div class="row" style="margin-top: 10px;">
+            <div class="col-xs-1"></div>
+            <div class="col-xs-10">
+                <input type="password" class="form-control" placeholder="Password" ng-model="formData.password">
+            </div>
+            <div class="col-xs-1"></div>
+        </div>
+    </div>
+    <div class="modal-footer" ng-show="!authenticated">
+        <button class="btn btn-primary" ng-click="lc.ok()">Anmelden</button>
+    </div>
+</form>

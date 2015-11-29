@@ -1,0 +1,14 @@
+<div ng-include src="'partials/header_action_bar.html'"></div>
+<div id="layout" class="content pure-g fit-content" ng-controller="ListCtrl">
+    <div id="list" class="pure-u-1" style="top:50px; bottom:50px;">
+        <div ng-repeat="item in listData">
+            <div class="email-item pure-g" ng-click="selectItem(item,$index);" ng-class="{'email-item-unread':!item.isSelected,'email-item-selected':item.isSelected}">
+                <div class="pure-u-3-4">
+                    <h5 class="email-name">{{item.name}}</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div ng-include="'partials/main-section.html'" class="width100percent"></div>
+</div>
+<div ng-include src="'partials/footer_action_bar.html'"></div>
